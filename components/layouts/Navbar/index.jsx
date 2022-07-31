@@ -1,6 +1,9 @@
 import SearchForm from "./SearchForm";
+import { useDispatch } from 'react-redux';
+import { openModal } from "../../../redux/slices/ui.slice";
 
-export default (props) => {
+export default () => {
+  const dispatch = useDispatch()
   return (
     <div className="flex justify-between px-10 py-6 drop-shadow-3xl bg-white">
       <div className="text-3xl font-bold">
@@ -25,7 +28,7 @@ export default (props) => {
             />
           </svg>
         </button>
-        <button className="border items-center gap-3 hover:bg-red-500 text-red-500 stroke-red-500 hover:stroke-white transition duration-150  hover:text-white flex flex-row bg-white border-red-500 px-4 rounded-md">
+        <button onClick={()=>dispatch(openModal())} className="border items-center gap-3 hover:bg-red-500 text-red-500 stroke-red-500 hover:stroke-white transition duration-150  hover:text-white flex flex-row bg-white border-red-500 px-4 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"

@@ -1,7 +1,10 @@
-export default () => {
+export default ({ amount, increase, decrease }) => {
   return (
     <div className="flex gap-4 items-center">
-      <div className="w-6 h-6 flex items-center justify-center rounded border border-red-500 text-red-500 cursor-pointer">
+      <div
+        onClick={decrease}
+        className="w-6 h-6 flex items-center justify-center rounded border border-red-500 text-red-500 cursor-pointer"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4"
@@ -13,8 +16,11 @@ export default () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
         </svg>
       </div>
-      <span>1</span>
-      <div className="w-6 h-6 flex items-center justify-center rounded bg-red-500 text-white cursor-pointer">
+      <span>{amount}</span>
+      <div
+        onClick={increase}
+        className="w-6 h-6 flex items-center justify-center rounded bg-red-500 text-white cursor-pointer"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4"
