@@ -4,23 +4,17 @@ import Navbar from "../components/layouts/Navbar";
 import Products from "../components/Products";
 import Sidebar from "../components/Sidebar";
 import styles from "../styles/main.module.css";
-import AddProduct from "../components/layouts/Modals/AddProduct";
-import { useRouter } from "next/router";
-import Transition from "../components/UI/Transition";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getProducts } from "../redux/actions/products.action";
-import CheckoutModal from "../components/layouts/Modals/CheckoutModal/CheckoutModal";
+import Modals from "../components/Modals";
 
 export default function Home() {
-  const { add_product_modal, success_modal } = useSelector((state) => state.ui);
-  const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (products.length === 0) {
-      dispatch(getProducts());
-    }
+    products.length === 0 ? dispatch(getProducts()) : null;
   }, []);
 
   return (
@@ -31,12 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Transition inprop={add_product_modal}>
-        <AddProduct />
-      </Transition>
-      <Transition inprop={success_modal}>
-        <CheckoutModal />
-      </Transition>
+      <Modals />
 
       <Navbar />
 

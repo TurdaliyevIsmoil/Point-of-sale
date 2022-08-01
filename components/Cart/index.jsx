@@ -1,7 +1,6 @@
 import CartHeader from "./CartHeader";
 import CartList from "./CartList";
 import Checkout from "./Checkout";
-import CheckoutModal from "../layouts/Modals/CheckoutModal/CheckoutModal";
 
 export default () => {
   return (

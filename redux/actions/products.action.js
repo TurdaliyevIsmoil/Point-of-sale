@@ -5,6 +5,8 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "./../firebase";
 import { endLoading, startLoading } from "../slices/ui.slice";
 
+
+// Add Product to Database
 export const sendProduct = (product) => {
   return async (dispatch) => {
     try {
@@ -43,6 +45,7 @@ export const sendProduct = (product) => {
   };
 };
 
+// Fetch Products
 export const getProducts = () => {
   return async (dispatch) => {
     try {

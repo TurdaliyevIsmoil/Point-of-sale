@@ -1,6 +1,7 @@
 import { clearCart } from "../slices/product.slice";
 import { closeSuccessModal, openSuccessModal } from "../slices/ui.slice";
 
+// Order Request
 export const sendOrder = () => {
   return (dispatch) => {
     // HTTP request
@@ -8,6 +9,6 @@ export const sendOrder = () => {
     setTimeout(() => {
       dispatch(closeSuccessModal());
       dispatch(clearCart());
-    }, 2000);
+    }, 3000);
   };
 };

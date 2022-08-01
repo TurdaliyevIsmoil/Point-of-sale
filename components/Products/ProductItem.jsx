@@ -14,6 +14,7 @@ export default ({ image, name, price, id }) => {
         <Image
           width={"100%"}
           height={"100%"}
+          className="object-cover"
           src={image || undefined}
           layout="fill"
         />
@@ -27,7 +28,7 @@ export default ({ image, name, price, id }) => {
         <span className="text-yellow-400 font-semibold flex text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            className="h-5 w-5"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

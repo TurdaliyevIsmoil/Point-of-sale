@@ -7,13 +7,13 @@ export default ({ amount, increase, decrease }) => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4"
+          className="h-4 w-4"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
+          strokeWidth="2"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
         </svg>
       </div>
       <span>{amount}</span>
@@ -23,15 +23,15 @@ export default ({ amount, increase, decrease }) => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4"
+          className="h-4 w-4"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M12 4v16m8-8H4"
           />
         </svg>
